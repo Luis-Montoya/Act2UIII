@@ -38,18 +38,18 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mi aplicación'),
+        title: const Text('AppBar'),
         centerTitle: true,
-        backgroundColor: const Color(0xFF4618AC),
+        backgroundColor: const Color(0xff1e99be),
         bottom: TabBar(
           controller: _tabController,
           tabs: [
             const Tab(icon: Icon(Icons.home)),
-            const Tab(icon: Icon(Icons.search)),
-            const Tab(icon: Icon(Icons.settings)),
+            const Tab(icon: Icon(Icons.cloud_outlined)),
+            const Tab(icon: Icon(Icons.brightness_5_sharp)),
           ],
-          indicator: BoxDecoration(
-            color: Color(0xFF1F0A4E), // Aquí asignamos el color deseado
+          indicator: const BoxDecoration(
+            color: Color(0xff0a637e), // Aquí asignamos el color deseado
           ),
         ),
       ),
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage>
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/fondo.jpg'),
@@ -73,18 +73,18 @@ class _HomePageState extends State<HomePage>
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Inicio'),
+              leading: const Icon(Icons.home),
+              title: const Text('Inicio'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Perfil'),
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Perfil'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Salir'),
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text('Salir'),
               onTap: () {},
             ),
           ],
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage>
                   height: 70,
                   child: const Text(
                     textAlign: TextAlign.center,
-                    'Jesus Alberto Angulo Ruiz',
+                    'Luis Ernesto Montoya Hernández',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage>
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                     border:
-                        Border.all(color: const Color(0xFF1F0A4E), width: 5),
+                        Border.all(color: const Color(0xff1e99be), width: 5),
                   ),
                 ),
                 Container(
@@ -125,14 +125,14 @@ class _HomePageState extends State<HomePage>
                     height: 250,
                     fit: BoxFit.cover,
                   ),
-                  decoration: BoxDecoration(
-                    border: const Border(
+                  decoration: const BoxDecoration(
+                    border: Border(
                       bottom: BorderSide(
-                        color: Color(0xFF1F0A4E),
+                        color: Color(0xff1e99be),
                         width: 10.0,
                       ),
                       top: BorderSide(
-                        color: Color(0xFF1F0A4E),
+                        color: Color(0xff1e99be),
                         width: 10.0,
                       ),
                     ),
@@ -150,45 +150,41 @@ class _HomePageState extends State<HomePage>
                   ),
                   decoration: BoxDecoration(
                       border:
-                          Border.all(color: const Color(0xFF1F0A4E), width: 5)),
+                          Border.all(color: const Color(0xff1e99be), width: 5)),
                 ),
               ],
             ),
           ),
-          Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Página de Búsqueda',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Te gusta la Lluvia?',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
-                SizedBox(height: 20),
-                Image.asset(
-                  'assets/fondo2.jpg',
-                  width: 250,
-                  height: 250,
-                  fit: BoxFit.cover,
-                ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/fondo2.jpg',
+                width: 250,
+                height: 250,
+                fit: BoxFit.cover,
+              ),
+            ],
           ),
-          Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Página de Configuración',
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                  ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Enserio te gustan los dias soleados?',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
